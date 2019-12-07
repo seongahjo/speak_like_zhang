@@ -13,10 +13,10 @@ AUDIO_PATH = os.path.join(AUDIO_DIR)
 app = Flask(__name__)
 
 
-@app.route('/generate', methods=['POST'])
-def view_method():
-	print(request.data.decode('utf-8'))
-	text = json.loads(request.data.decode('utf-8'))["text"]
+@app.route('/generate', methods=['GET'])
+def generate():
+	print(request.args.decode('utf-8'))
+	text = json.loads(request.args.decode('utf-8'))["text"]
 	print(text)
 	audio_path = synthesizer.synthesize(texts=text.split('\n'), base_path='logdir-tacotron2/generate', speaker_ids=[0],
 										attention_trim=True, base_alignment_path=None,
@@ -24,6 +24,11 @@ def view_method():
 	return send_file(audio_path, mimetype="audio/wav",
 					 as_attachment=True,
 					 attachment_filename='file.wav')
+
+
+@app.route('/', methods=['GET'])
+def rendering():
+	return render_template('view.html')
 
 
 parser = argparse.ArgumentParser()
@@ -38,4 +43,4 @@ config = parser.parse_args()
 synthesizer = Synthesizer()
 synthesizer.load('logdir-tacotron2/zhang', 1, None, inference_prenet_dropout=False, config=config)
 
-app.run(host='0.0.0.0', port=9998)
+app.run(host='0.0.0.0', port=80)

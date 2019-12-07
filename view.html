@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<audio controls="controls" id="audio">
+    <!--    <source src="track.mp3" type="audio/mpeg"/>-->
+    Your browser does not support the audio element.
+</audio>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</body>
+<script>
+    $("#audio").append(`<source src="http://localhost/generate?text=테스트" type="audio/mpeg"`);
+</script>
+</html>
