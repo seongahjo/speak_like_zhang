@@ -11,7 +11,7 @@ Tacotron2를 활용한 실시간 TTS 서비스
 
 ### 시연
 **Chrome으로 열어주세요!**
-[![Run on Ainize](https://ainize.ai/static/images/run_on_ainize_button.svg)](https://endpoint.ainize.ai/seongahjo/speak_like_zhang)
+[![Run on Ainize](https://ainize.ai/static/images/run_on_ainize_button.svg)](http://34.69.120.34)
 
 
 
