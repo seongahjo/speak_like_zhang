@@ -10,7 +10,7 @@ Tacotron2를 활용한 실시간 TTS 서비스
 * 버튼을 누른다
 
 ### 시연
-
+[![Run on Ainize](https://ainize.ai/static/images/run_on_ainize_button.svg)](https://endpoint.ainize.ai/seongahjo/speak_like_zhang)
 
 
 
