@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/animate.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/ionicons.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/jquery.timepicker.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+</head>
+<body>
+<!-- END nav -->
+
+<div class="hero-wrap ftco-degree-bg" style="background-image: url({{ url_for('static', filename = 'image/bg.jpg') }});"
+     data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text justify-content-center align-items-center">
+            <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+                <div class="text text-center">
+                    <h1 class="mb-4">목소리로<br>읽어 드립니다</h1>
+                    <p style="font-size: 18px;">입력하신 텍스트를 실시간으로 딥러닝을 통해 학습한 음성으로 읽어드립니다</p>
+                    <form action="#" class="search-location mt-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 align-items-end">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                        <input type="text" class="form-control" placeholder="텍스트 입력" id="input_text">
+                                        <button onclick="click_event()"><span class="ion-ios-search"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mouse">
+        <a href="#" class="mouse-icon">
+            <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+        </a>
+    </div>
+</div>
+
+<section class="ftco-section ftco-no-pb">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">목소리를 빌려드립니다</span>
+                <h2 class="mb-2">가장 손쉽게 딥러닝 TTS를 이용하는 방법</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="icon d-flex justify-content-center align-items-center"><span
+                            class="flaticon-wallet"></span></div>
+                    <div class="media-body py-md-4">
+                        <h3>가격</h3>
+                        <p>무료로 텍스트를 목소리로 바꾸어 드립니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="icon d-flex justify-content-center align-items-center"><span
+                            class="flaticon-file"></span></div>
+                    <div class="media-body py-md-4">
+                        <h3>기술</h3>
+                        <p>딥러닝을 통해 학습한 '장용범' 씨의 목소리를 빌려드립니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="icon d-flex justify-content-center align-items-center"><span
+                            class="flaticon-locked"></span></div>
+                    <div class="media-body py-md-4">
+                        <h3>보안</h3>
+                        <p>입력된 텍스트는 어디에도 저장되지 않습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | This template is made with <i class="icon-heart color-danger"
+                                                                        aria-hidden="true"></i> by <a
+                            href="https://colorlib.com" target="_blank">성아조</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00"/>
+    </svg>
+</div>
+
+
+<script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery-migrate-3.0.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery.easing.1.3.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery.stellar.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/aos.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery.animateNumber.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/bootstrap-datepicker.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery.timepicker.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/scrollax.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+<script>
+    function click_event() {
+        var text = document.getElementById("input_text").value;
+        var result = document.getElementById("result");
+        var audio = document.createElement("audio");
+        audio.controls = 'controls';
+        audio.classList.add('form-control');
+        audio.type = 'audio/mpeg';
+        audio.src = `{{addr}}generate?text=${text}`;
+        result.appendChild(audio);
+    }
+
+</script>
+
+</body>
+</html>

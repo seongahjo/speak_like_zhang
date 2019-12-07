@@ -28,7 +28,7 @@ def generate():
 @app.route('/', methods=['GET'])
 def rendering():
 	addr = request.url_root
-	return render_template('view.html', addr=addr)
+	return render_template('index.html', addr=addr)
 
 
 parser = argparse.ArgumentParser()
