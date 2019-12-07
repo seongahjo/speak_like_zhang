@@ -15,8 +15,7 @@ app = Flask(__name__)
 
 @app.route('/generate', methods=['GET'])
 def generate():
-	print(request.args.decode('utf-8'))
-	text = json.loads(request.args.decode('utf-8'))["text"]
+	text = request.args["text"]
 	print(text)
 	audio_path = synthesizer.synthesize(texts=text.split('\n'), base_path='logdir-tacotron2/generate', speaker_ids=[0],
 										attention_trim=True, base_alignment_path=None,
