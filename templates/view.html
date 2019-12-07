@@ -26,7 +26,7 @@
         audio.controls = 'controls';
         audio.classList.add('form-control');
         audio.type = 'audio/mpeg';
-        audio.src = `http://{{addr}}:9900/generate?text=${text}`;
+        audio.src = `{{addr}}/generate?text=${text}`;
         result.appendChild(audio);
     }
 
