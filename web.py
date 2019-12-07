@@ -42,6 +42,6 @@ parser.add_argument('--file', type=str, default='test.wav')
 parser.add_argument('--gpu', type=int, default=0)
 config = parser.parse_args()
 synthesizer = Synthesizer()
-synthesizer.load('logdir-tacotron2/zhang', 1, None, inference_prenet_dropout=False, config=config)
+synthesizer.load('model', 1, None, inference_prenet_dropout=False, config=config)
 
 app.run(host='0.0.0.0', port=80)
