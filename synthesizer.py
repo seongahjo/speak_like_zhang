@@ -75,13 +75,10 @@ class Synthesizer(object):
 
 		print('Loading checkpoint: %s' % checkpoint_path)
 
-		gpu_option = tf.GPUOptions(visible_device_list=str(config.gpu))
 		sess_config = tf.ConfigProto(
 			allow_soft_placement=True,
 			intra_op_parallelism_threads=1,
-			inter_op_parallelism_threads=2,
-			gpu_options=gpu_option)
-		sess_config.gpu_options.allow_growth = True
+			inter_op_parallelism_threads=2)
 
 		self.sess = tf.Session(config=sess_config)
 		self.sess.run(tf.global_variables_initializer())
@@ -264,7 +261,6 @@ if __name__ == "__main__":
 	parser.add_argument('--is_korean', default=True, type=str2bool)
 	parser.add_argument('--base_alignment_path', default=None)
 	parser.add_argument('--file', required=True)
-	parser.add_argument('--gpu', type=int, default=0)
 	config = parser.parse_args()
 
 	makedirs(config.sample_path)
